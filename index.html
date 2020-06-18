@@ -359,8 +359,41 @@
             </li>
           </ul>
         </div>
+        <div>
+          <form action="" class="subscribe">
+            <label for="mail" class="mail-label"
+              ><b>Подпишитесь на рассылку</b></label
+            >
+            <div class="subscribe-form">
+              <input
+                class="mail-input"
+                type="email"
+                name="mail"
+                id="mail"
+                placeholder="E-mail"
+              />
+              <button class="mail-button" type="submit">
+                Подписаться
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
       <p class="copyright">2020 | Developed by GoIT Students</p>
     </footer>
+
+    <script>
+      (() => {
+        document.querySelector(".subscribe").addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          new FormData(e.currentTarget).forEach((value, name) =>
+            console.log(`${name}: ${value}`)
+          );
+        });
+      })();
+    </script>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
