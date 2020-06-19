@@ -56,7 +56,7 @@
     <main>
       <section class="hero-section">
         <h1 class="solutions">эффективные решения для вашего бизнеса</h1>
-        <a href="" class="btn">Заказать услугу</a>
+        <a href="" class="btn" data-modal-open>Заказать услугу</a>
       </section>
       <section class="qualities-section">
         <div class="container">
@@ -370,7 +370,7 @@
                 type="email"
                 name="mail"
                 id="mail"
-                placeholder="E-mail"
+                placeholder="  E-mail"
               />
               <button class="mail-button" type="submit">
                 Подписаться
@@ -381,6 +381,59 @@
       </div>
       <p class="copyright">2020 | Developed by GoIT Students</p>
     </footer>
+    <div class="backdrop" data-modal>
+      <div class="modal">
+        <button class="modal-close-button" data-modal-close>Close</button>
+        <form action="" class="modal-form">
+          <div class="modal-title">
+            <label for="name">Оставьте свои данные, мы вам перезвоним</label>
+          </div>
+          <div class="modal-field">
+            <input
+              class="modal-input"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Имя"
+            />
+          </div>
+          <div class="modal-field">
+            <input
+              class="modal-input"
+              type="tel"
+              name="tel"
+              id="tel"
+              placeholder="Телефон"
+            />
+          </div>
+          <div class="modal-field">
+            <input
+              class="modal-input"
+              type="email"
+              name="mail"
+              id="mail"
+              placeholder="Почта"
+            />
+          </div>
+          <div class="modal-comment-field modal-comment">
+            <textarea
+              name="textarea"
+              id="textarea"
+              placeholder="Комментарий"
+            ></textarea>
+          </div>
+          <div class="modal-policy">
+            <input type="checkbox" name="policy" id="policy" />
+            <label for="policy" class="modal-policy-label"
+              >Соглашаюсь с рассылкой и Принимаю Условия договора</label
+            >
+          </div>
+          <div class="modal-submit-button">
+            <button class="modal-submit" type="submit">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <script>
       (() => {
