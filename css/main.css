@@ -859,6 +859,7 @@ h3.title {
 
 .backdrop.is-hidden {
   opacity: 0;
+  transform: scale(2);
   pointer-events: none;
 }
 
