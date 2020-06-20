@@ -805,9 +805,11 @@ h3.title {
 }
 
 .modal-checkbox:checked + .modal-checkbox-icon {
-  background-image: url("..//img/check.svg");
+  border-color: #2196f3;
   background-color: #2196f3;
-  border: 0;
+  background-image: url("..//img/check.svg");
+  background-size: contain;
+  background-origin: border-box;
 }
 
 .mail-input {
