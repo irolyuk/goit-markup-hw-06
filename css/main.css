@@ -627,6 +627,49 @@ h3.title {
   fill: currentColor;
 }
 
+.modal-icon-name {
+  position: absolute;
+  top: 50%;
+  left: 19px;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+}
+
+.modal-icon-phone {
+  position: absolute;
+  top: 50%;
+  left: 19px;
+  transform: translateY(-50%);
+  width: 13px;
+  height: 13px;
+  fill: currentColor;
+}
+
+.modal-icon-mail {
+  position: absolute;
+  top: 50%;
+  left: 19px;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 12px;
+  fill: currentColor;
+}
+
+.modal-icon-close {
+  width: 11px;
+  height: 11px;
+  fill: currentColor;
+}
+
+.modal-icon-subscribe {
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
 .header-tel {
   width: 10px;
   height: 15px;
@@ -745,6 +788,28 @@ h3.title {
   width: 570px;
   height: 86px;
 }
+
+.modal-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.modal-checkbox-icon {
+  width: 16px;
+  height: 15px;
+  fill: currentColor;
+  border: 2px solid #212121;
+  border-radius: 2px;
+}
+
+.modal-checkbox:checked + .modal-checkbox-icon {
+  background-image: url("..//img/check.svg");
+  background-color: #2196f3;
+  border: 0;
+}
+
 .mail-input {
   width: 358px;
   height: 50px;
@@ -752,6 +817,7 @@ h3.title {
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  padding-left: 16px;
 }
 
 .mail-button {
@@ -764,20 +830,17 @@ h3.title {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mail-button:hover,
+.mail-button:focus {
+  background: #188ce8;
 }
 
 .subscribe-form {
   display: flex;
   justify-content: space-between;
-}
-
-.mail-button::after {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  content: "";
-  margin-left: 10px;
-  background-image: url(../img/send.svg);
 }
 
 .mail-input::placeholder {
@@ -817,17 +880,32 @@ h3.title {
 }
 
 .modal-field {
+  position: relative;
   margin-bottom: 28px;
   display: flex;
   flex-direction: column;
-  border: 1px solid rgba(33, 33, 33, 0.2);
+
   border-radius: 4px;
 }
 
-.modal-field:hover,
-.modal-field:focus {
+.modal-label {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  transform: translateY(-50%);
+  color: #757575;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-label svg {
+  color: currentColor;
+}
+
+.modal-input:hover,
+.modal-input:focus {
   border: 1px solid #2196f3;
   border-radius: 4px;
+  outline-style: none;
 }
 
 .modal-title {
@@ -844,6 +922,7 @@ h3.title {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   height: 40px;
+  padding-left: 42px;
 }
 
 .modal-input::placeholder {
@@ -853,14 +932,22 @@ h3.title {
   color: #757575;
 }
 
+.modal-input:focus + .modal-label,
+.modal-input:not(:placeholder-shown) + .modal-label {
+  color: #2196f3;
+  transform: translate(-25px, -40px);
+  font-size: 12px;
+}
+
+.modal-input:focus ~ .modal-icon {
+  color: #2196f3;
+}
+
 .modal-policy-label {
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
   color: #757575;
-}
-
-.modal-policy {
   padding: 0;
   margin: 0;
   margin-bottom: 30px;
@@ -876,6 +963,8 @@ h3.title {
 .modal-comment textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  padding-left: 16px;
+  padding-top: 12px;
 }
 
 textarea {
@@ -884,18 +973,20 @@ textarea {
 }
 
 .modal-comment-field {
+  position: relative;
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  border: 1px solid rgba(33, 33, 33, 0.2);
+
   border-radius: 4px;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-comment-field:hover,
-.modal-comment-field:focus {
+.modal-comment-field textarea:hover,
+.modal-comment-field textarea:focus {
   border: 1px solid #2196f3;
   border-radius: 4px;
+  outline-style: none;
 }
 
 .modal-submit-button {
@@ -930,11 +1021,12 @@ textarea {
   width: 30px;
   height: 30px;
   background: #ffffff;
+  border-radius: 50px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-button:hover,
 .modal-close-button:focus {
-  background: #2196f3;
+  color: #2196f3;
 }

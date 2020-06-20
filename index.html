@@ -56,7 +56,7 @@
     <main>
       <section class="hero-section">
         <h1 class="solutions">эффективные решения для вашего бизнеса</h1>
-        <a href="" class="btn" data-modal-open>Заказать услугу</a>
+        <button class="btn" data-modal-open>Заказать услугу</button>
       </section>
       <section class="qualities-section">
         <div class="container">
@@ -360,7 +360,7 @@
           </ul>
         </div>
         <div>
-          <form action="" class="subscribe">
+          <form action="" class="subscribe" autocomplete="off">
             <label for="mail" class="mail-label"
               ><b>Подпишитесь на рассылку</b></label
             >
@@ -370,10 +370,13 @@
                 type="email"
                 name="mail"
                 id="mail"
-                placeholder="  E-mail"
+                placeholder="E-mail"
               />
               <button class="mail-button" type="submit">
                 Подписаться
+                <svg class="modal-icon-subscribe">
+                  <use href="./img/sprite.svg#icon-subscribe"></use>
+                </svg>
               </button>
             </div>
           </form>
@@ -383,8 +386,12 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="modal-close-button" data-modal-close>X</button>
-        <form action="" class="modal-form">
+        <button class="modal-close-button" data-modal-close>
+          <svg class="modal-icon-close">
+            <use href="./img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+        <form action="" class="modal-form" autocomplete="off">
           <div class="modal-title">
             <label for="name">Оставьте свои данные, мы вам перезвоним</label>
           </div>
@@ -394,8 +401,14 @@
               type="text"
               name="name"
               id="name"
-              placeholder="Имя"
+              placeholder=" "
             />
+            <label class="modal-label" for="name"> Имя</label>
+            <span class="modal-icon">
+              <svg class="modal-icon-name">
+                <use href="./img/sprite.svg#icon-name"></use>
+              </svg>
+            </span>
           </div>
           <div class="modal-field">
             <input
@@ -403,8 +416,14 @@
               type="tel"
               name="tel"
               id="tel"
-              placeholder="Телефон"
+              placeholder=" "
             />
+            <label class="modal-label" for="tel"> Телефон</label>
+            <span class="modal-icon">
+              <svg class="modal-icon-phone">
+                <use href="./img/sprite.svg#icon-phone"></use>
+              </svg>
+            </span>
           </div>
           <div class="modal-field">
             <input
@@ -412,8 +431,14 @@
               type="email"
               name="mail"
               id="mail"
-              placeholder="Почта"
+              placeholder=" "
             />
+            <label class="modal-label" for="mail"> Почта</label>
+            <span class="modal-icon">
+              <svg class="modal-icon-mail">
+                <use href="./img/sprite.svg#icon-mail"></use>
+              </svg>
+            </span>
           </div>
           <div class="modal-comment-field modal-comment">
             <textarea
@@ -422,10 +447,16 @@
               placeholder="Комментарий"
             ></textarea>
           </div>
-          <div class="modal-policy">
-            <input type="checkbox" name="policy" id="policy" />
-            <label for="policy" class="modal-policy-label"
-              >Соглашаюсь с рассылкой и Принимаю Условия договора</label
+          <div>
+            <label class="modal-policy-label">
+              <input
+                class="modal-checkbox"
+                type="checkbox"
+                name="policy"
+                id="policy"
+              />
+              <span class="modal-checkbox-icon"> </span>
+              Соглашаюсь с рассылкой и Принимаю Условия договора</label
             >
           </div>
           <div class="modal-submit-button">
