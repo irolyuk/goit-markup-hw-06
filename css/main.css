@@ -905,6 +905,12 @@ h3.title {
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.comment-label {
+  top: 12px;
+  left: 16px;
+  transform: translateY(0);
+}
+
 .modal-label svg {
   color: currentColor;
 }
@@ -949,6 +955,13 @@ h3.title {
 
 .modal-input:focus ~ .modal-icon {
   color: #2196f3;
+}
+
+.textarea-input:focus + .comment-label,
+.textarea-input:not(:placeholder-shown) + .comment-label {
+  color: #2196f3;
+  transform: translate(0px, -30px);
+  font-size: 12px;
 }
 
 .modal-policy-label {
